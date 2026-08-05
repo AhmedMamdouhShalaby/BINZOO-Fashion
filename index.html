@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOSCA — Since 2016</title>
+<meta name="description" content="BOSCA — a modern fashion house established in 2016. Shop dresses, tops, sets and outerwear cut for confident, considered style.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce-bar"><p>Free shipping on orders over LE 2,500 &nbsp;•&nbsp; New Arrivals just landed</p></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <button class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="collection.html?c=dresses">New In</a>
+      <a href="collection.html?c=dresses">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="#best-sellers">Best Sellers</a>
+      <a href="collection.html?c=accessories">Sale</a>
+      <a href="#" class="nav-account">Account</a>
+    </nav>
+    <a href="index.html" class="logo"><span class="logo-mark">BOSCA</span><span class="logo-since">Since 2016</span></a>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.2C.4 8 2 4.5 5.6 4.1 8 3.8 10 5 12 7.5 14 5 16 3.8 18.4 4.1 22 4.5 23.6 8 22 11.8 19.5 16.4 12 21 12 21z"/></svg>
+      </button>
+      <button class="icon-btn" id="cartToggle" aria-label="Bag">
+        <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L4 3H2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="search-panel" id="searchPanel">
+    <div class="search-panel-inner">
+      <input type="text" id="searchInput" placeholder="Search products…" autocomplete="off">
+      <button class="icon-btn" id="searchClose" aria-label="Close search">✕</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</header>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head"><h3>Your Bag</h3><button class="icon-btn" id="cartClose" aria-label="Close cart">✕</button></div>
+  <div class="cart-items" id="cartItems"><p class="cart-empty">Your bag is currently empty.</p></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Subtotal</span><span id="cartSubtotal">LE 0.00</span></div>
+    <p class="cart-shipping-note">Free shipping on orders over LE 2,500 EGP</p>
+    <button class="btn btn-dark btn-block">Checkout</button>
+  </div>
+</aside>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <img src="https://images.pexels.com/photos/36397391/pexels-photo-36397391.jpeg" alt="BOSCA campaign">
+    <div class="hero-overlay">
+      <div class="hero-mark" aria-hidden="true">BOSCA</div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">New Season · Since 2016</span>
+        <h1>Wear What Leads.</h1>
+        <p>Considered pieces cut for presence and precision — designed with intent, made to move through your day into the night.</p>
+        <div class="hero-ctas">
+          <a href="collection.html?c=dresses" class="btn btn-gold">Shop the Collection</a>
+          <a href="collection.html?c=dresses" class="btn btn-outline-light">Explore New Arrivals</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature ticker -->
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="tickerTrack"></div></div>
+
+  <!-- New Arrivals -->
+  <section class="collection">
+    <div class="collection-head">
+      <h2>New Arrivals</h2>
+      <a href="collection.html?c=dresses" class="view-all">View all</a>
+    </div>
+    <div class="product-grid" id="newArrivalsGrid"></div>
+  </section>
+
+  <!-- Shop by Category -->
+  <section class="section" id="collections">
+    <div class="section-head">
+      <div><span class="eyebrow">Shop by Category</span><h2>Find Your Line</h2></div>
+    </div>
+    <div class="category-editorial">
+      <a href="collection.html?c=dresses">
+        <img src="https://images.pexels.com/photos/35226950/pexels-photo-35226950.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Dresses">
+        <div class="cat-overlay"><h3>Dresses</h3><span class="cat-link">Explore Collection →</span></div>
+      </a>
+      <a href="collection.html?c=sets">
+        <img src="https://images.pexels.com/photos/36204399/pexels-photo-36204399.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Sets">
+        <div class="cat-overlay"><h3>Sets</h3><span class="cat-link">Explore Collection →</span></div>
+      </a>
+      <a href="collection.html?c=outerwear">
+        <img src="https://images.pexels.com/photos/13838843/pexels-photo-13838843.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Outerwear">
+        <div class="cat-overlay"><h3>Outerwear</h3><span class="cat-link">Explore Collection →</span></div>
+      </a>
+      <a href="collection.html?c=tops">
+        <img src="https://images.pexels.com/photos/20433552/pexels-photo-20433552.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Tops">
+        <div class="cat-overlay"><h3>Tops</h3><span class="cat-link">Explore Collection →</span></div>
+      </a>
+      <a href="collection.html?c=bottoms">
+        <img src="https://images.pexels.com/photos/34685394/pexels-photo-34685394.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Bottoms">
+        <div class="cat-overlay"><h3>Bottoms</h3><span class="cat-link">Explore Collection →</span></div>
+      </a>
+      <a href="collection.html?c=accessories">
+        <img src="https://images.pexels.com/photos/17299345/pexels-photo-17299345.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Accessories">
+        <div class="cat-overlay"><h3>Accessories</h3><span class="cat-link">Explore Collection →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured collection editorial -->
+  <section class="editorial-feature">
+    <img src="https://images.pexels.com/photos/31861865/pexels-photo-31861865.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="The Bosca Edit">
+    <div class="editorial-feature-overlay">
+      <span class="eyebrow">Featured Collection</span>
+      <h2>The Bosca Edit</h2>
+      <p>Curated pieces built to make every entrance unforgettable.</p>
+      <a href="collection.html?c=dresses" class="btn btn-outline-light">Discover the Collection</a>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section class="collection" id="best-sellers">
+    <div class="collection-head">
+      <h2>Best Sellers</h2>
+      <a href="collection.html?c=dresses" class="view-all">View all</a>
+    </div>
+    <div class="product-grid" id="bestSellersGrid"></div>
+  </section>
+
+  <!-- Brand plaque / identity moment -->
+  <section class="brand-plaque">
+    <div class="brand-plaque-mark">
+      <img src="images/bosca-logo.jpeg" alt="BOSCA — Since 2016">
+    </div>
+    <div class="brand-plaque-copy">
+      <span class="eyebrow">Established 2016</span>
+      <h2>Built On Precision, Worn With Confidence.</h2>
+      <p>BOSCA began as a small studio with one belief — that clothing should be as deliberate as the people who wear it. A decade on, every stitch, cut and colour is still chosen with that same intent.</p>
+      <a href="collection.html?c=dresses" class="btn btn-outline" style="align-self:flex-start;">Shop the Line</a>
+    </div>
+  </section>
+
+  <!-- Social proof -->
+  <section class="social-proof">
+    <span class="eyebrow">Community</span>
+    <h2>The Bosca Crowd</h2>
+    <p>Seen, loved &amp; worn by a growing community who choose their own definition of style, every day.</p>
+    <div class="social-grid">
+      <a href="https://www.instagram.com/boscastore.eg" target="_blank" rel="noopener">
+        <img src="https://images.pexels.com/photos/14371053/pexels-photo-14371053.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Bosca community">
+        <div class="sg-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/boscastore.eg" target="_blank" rel="noopener">
+        <img src="https://images.pexels.com/photos/32037515/pexels-photo-32037515.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Bosca community">
+        <div class="sg-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/boscastore.eg" target="_blank" rel="noopener">
+        <img src="https://images.pexels.com/photos/8744534/pexels-photo-8744534.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Bosca community">
+        <div class="sg-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/boscastore.eg" target="_blank" rel="noopener">
+        <img src="https://images.pexels.com/photos/8640242/pexels-photo-8640242.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Bosca community">
+        <div class="sg-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/boscastore.eg" target="_blank" rel="noopener">
+        <img src="https://images.pexels.com/photos/12055314/pexels-photo-12055314.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Bosca community">
+        <div class="sg-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/boscastore.eg" target="_blank" rel="noopener">
+        <img src="https://images.pexels.com/photos/3427560/pexels-photo-3427560.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Bosca community">
+        <div class="sg-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg></div>
+      </a>
+    </div>
+    <a href="https://www.instagram.com/boscastore.eg" target="_blank" rel="noopener" class="btn btn-outline">Follow @boscastore.eg</a>
+  </section>
+
+  <!-- Campaign / spotlight -->
+  <section class="campaign">
+    <img src="https://images.pexels.com/photos/4911458/pexels-photo-4911458.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="BOSCA campaign">
+    <div class="campaign-copy">
+      <span class="eyebrow">Campaign</span>
+      <h2>Bosca In The Spotlight</h2>
+      <p>Made to be seen. Every season, BOSCA partners with the faces and voices shaping fashion today — bringing the collection to life on and off the street.</p>
+      <a href="collection.html?c=dresses" class="btn btn-outline-light">Explore the Campaign</a>
+    </div>
+  </section>
+
+  <!-- Brand story -->
+  <section class="brand-story">
+    <span class="eyebrow">Our Story</span>
+    <h2>More Than Fashion.</h2>
+    <p>BOSCA is about confidence, individuality and pieces designed to become part of your story. From first sketch to final stitch, every collection is built for the person who moves through their day with intention.</p>
+    <a href="#">Discover Our Story →</a>
+  </section>
+
+  <!-- Store locations -->
+  <section class="stores" id="stores">
+    <img src="https://images.pexels.com/photos/31049717/pexels-photo-31049717.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="BOSCA stores">
+    <div class="stores-overlay">
+      <h2>Visit Our Stores</h2>
+      <p>Cairo &amp; Giza &nbsp;•&nbsp; Discover the full collection in person at our flagship locations</p>
+      <a href="#" class="btn btn-light">See Locations</a>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-band" id="contact">
+    <span class="eyebrow">Newsletter</span>
+    <h3>Join the Bosca Community</h3>
+    <p>Subscribe for early access to new arrivals, private sales, and campaign news.</p>
+    <form id="newsletterForm">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn btn-dark">Subscribe</button>
+    </form>
+    <p class="newsletter-msg" id="newsletterMsg"></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-mark" aria-hidden="true">BOSCA</div>
+  <div class="footer-top">
+    <a href="index.html" class="logo"><span class="logo-mark">BOSCA</span><span class="logo-since">Since 2016</span></a>
+    <p>A modern fashion house — designed for confidence, individuality, and pieces that become part of your story.</p>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="collection.html?c=dresses">Dresses</a>
+      <a href="collection.html?c=tops">Tops</a>
+      <a href="collection.html?c=sets">Sets</a>
+      <a href="collection.html?c=outerwear">Outerwear</a>
+    </div>
+    <div class="footer-col">
+      <h4>About</h4>
+      <a href="#">Our Story</a>
+      <a href="#">Careers</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Customer Service</h4>
+      <a href="#">Shipping &amp; Returns</a>
+      <a href="#">Size Guide</a>
+      <a href="#stores">Store Locations</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/boscastore.eg" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+        </a>
+        <a href="https://web.facebook.com/bosca.fashion.wear1" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@boscastore" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 BOSCA. All rights reserved.</p></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

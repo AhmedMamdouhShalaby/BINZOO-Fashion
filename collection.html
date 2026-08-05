@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">BOSCA — Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce-bar"><p>Free shipping on orders over LE 2,500 &nbsp;•&nbsp; New Arrivals just landed</p></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <button class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="collection.html?c=dresses">New In</a>
+      <a href="collection.html?c=dresses">Shop</a>
+      <a href="index.html#collections">Collections</a>
+      <a href="index.html#best-sellers">Best Sellers</a>
+      <a href="collection.html?c=accessories">Sale</a>
+      <a href="#" class="nav-account">Account</a>
+    </nav>
+    <a href="index.html" class="logo"><span class="logo-mark">BOSCA</span><span class="logo-since">Since 2016</span></a>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.2C.4 8 2 4.5 5.6 4.1 8 3.8 10 5 12 7.5 14 5 16 3.8 18.4 4.1 22 4.5 23.6 8 22 11.8 19.5 16.4 12 21 12 21z"/></svg>
+      </button>
+      <button class="icon-btn" id="cartToggle" aria-label="Bag">
+        <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L4 3H2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="search-panel" id="searchPanel">
+    <div class="search-panel-inner">
+      <input type="text" id="searchInput" placeholder="Search products…" autocomplete="off">
+      <button class="icon-btn" id="searchClose" aria-label="Close search">✕</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</header>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head"><h3>Your Bag</h3><button class="icon-btn" id="cartClose" aria-label="Close cart">✕</button></div>
+  <div class="cart-items" id="cartItems"><p class="cart-empty">Your bag is currently empty.</p></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Subtotal</span><span id="cartSubtotal">LE 0.00</span></div>
+    <p class="cart-shipping-note">Free shipping on orders over LE 2,500 EGP</p>
+    <button class="btn btn-dark btn-block">Checkout</button>
+  </div>
+</aside>
+
+<section class="collection-hero">
+  <img id="collHeroImg" src="" alt="">
+  <div class="collection-hero-overlay">
+    <span class="eyebrow">BOSCA</span>
+    <h1 id="collHeroTitle">Collection</h1>
+  </div>
+</section>
+
+<section class="collection-body">
+  <aside class="filter-sidebar">
+    <h4>Availability</h4>
+    <label class="filter-row"><span>In stock</span><span id="countInStock">0</span></label>
+    <label class="filter-row"><span>Out of stock</span><span id="countOutStock">0</span></label>
+    <h4>Category</h4>
+    <div class="filter-row"><span>All</span><span id="countAll">0</span></div>
+    <h4>Fabric</h4>
+    <div class="filter-row"><span id="fabricLabel">—</span></div>
+    <h4>Price</h4>
+    <div class="filter-row"><span>All prices</span></div>
+  </aside>
+
+  <div>
+    <div class="collection-toolbar">
+      <span id="productCount">0 products</span>
+      <select id="sortSelect">
+        <option value="featured">Featured</option>
+        <option value="price-asc">Price, low to high</option>
+        <option value="price-desc">Price, high to low</option>
+        <option value="az">Alphabetically, A–Z</option>
+        <option value="za">Alphabetically, Z–A</option>
+      </select>
+    </div>
+    <div class="collection-grid" id="collectionGrid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-mark" aria-hidden="true">BOSCA</div>
+  <div class="footer-top">
+    <a href="index.html" class="logo"><span class="logo-mark">BOSCA</span><span class="logo-since">Since 2016</span></a>
+    <p>A modern fashion house — designed for confidence, individuality, and pieces that become part of your story.</p>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="collection.html?c=dresses">Dresses</a>
+      <a href="collection.html?c=tops">Tops</a>
+      <a href="collection.html?c=sets">Sets</a>
+      <a href="collection.html?c=outerwear">Outerwear</a>
+    </div>
+    <div class="footer-col">
+      <h4>About</h4>
+      <a href="#">Our Story</a>
+      <a href="#">Careers</a>
+      <a href="index.html#contact">Contact Us</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Customer Service</h4>
+      <a href="#">Shipping &amp; Returns</a>
+      <a href="#">Size Guide</a>
+      <a href="index.html#stores">Store Locations</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/boscastore.eg" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+        </a>
+        <a href="https://web.facebook.com/bosca.fashion.wear1" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@boscastore" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 BOSCA. All rights reserved.</p></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+<script src="js/collection-page.js"></script>
+</body>
+</html>
