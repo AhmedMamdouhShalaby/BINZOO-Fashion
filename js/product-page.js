@@ -5,7 +5,7 @@
   const id = params.get("id");
   const product = ALL_PRODUCTS.find(p => p.id === id) || ALL_PRODUCTS[0];
 
-  document.title = `BOSCA — ${product.name}`;
+  document.title = `BINZOO — ${product.name}`;
   const crumbName = document.getElementById("crumbName");
   if (crumbName) crumbName.textContent = product.name;
   const crumbCollection = document.getElementById("crumbCollection");
@@ -154,12 +154,12 @@
 
   /* ---------- Add to cart / Buy now ---------- */
   document.getElementById("addToCartBtn").addEventListener("click", () => {
-    if (window.BoscaAddToCart) window.BoscaAddToCart(product.id, qty);
+    if (window.BINZOOAddToCart) window.BINZOOAddToCart(product.id, qty);
   });
   const buyNowBtn = document.getElementById("buyNowBtn");
   if (buyNowBtn) {
     buyNowBtn.addEventListener("click", () => {
-      if (window.BoscaAddToCart) window.BoscaAddToCart(product.id, qty);
+      if (window.BINZOOAddToCart) window.BINZOOAddToCart(product.id, qty);
       document.getElementById("cartToggle")?.click();
     });
   }
@@ -175,6 +175,6 @@
     const sameCollection = (PRODUCTS[product.collection] || []).filter(p => p.id !== product.id);
     const pool = sameCollection.length >= 4 ? sameCollection : ALL_PRODUCTS.filter(p => p.id !== product.id);
     const related = pool.sort(() => 0.5 - Math.random()).slice(0, 5);
-    relatedGrid.innerHTML = related.map(window.BoscaCardHTML).join("");
+    relatedGrid.innerHTML = related.map(window.BINZOOCardHTML).join("");
   }
 })();

@@ -1,4 +1,4 @@
-/* ---------- Photo pool (placeholder fashion photography — swap for real BOSCA campaign/product shots) ---------- */
+/* ---------- Photo pool (placeholder fashion photography — swap for real BINZOO campaign/product shots) ---------- */
 const PHOTO_IDS = [
   8995906, 38244095, 14371053, 32037515, 34685394, 17299345, 8744534, 8640242,
   31861865, 12055314, 31861864, 3427560, 33519724, 4911458, 31049717, 36168986,
@@ -37,7 +37,7 @@ function makeProduct(id, name, price, collection, opts = {}) {
     fabric: opts.fabric || "Premium Blend",
     colors: opts.colors || [name],
     img: imgs[0], img2: imgs[1], img3: imgs[2], img4: imgs[3],
-    desc: opts.desc || "A signature BOSCA piece — cut for a confident silhouette in a fluid, considered fabric that moves with you from day into evening.",
+    desc: opts.desc || "A signature BINZOO piece — cut for a confident silhouette in a fluid, considered fabric that moves with you from day into evening.",
     features: opts.features || [
       "Designed in-house, cut for a flattering fit",
       "Fluid, breathable fabric with structured drape",

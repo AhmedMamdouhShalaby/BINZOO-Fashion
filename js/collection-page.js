@@ -6,7 +6,7 @@
   const items = (PRODUCTS[collectionKey] || PRODUCTS["dresses"]).slice();
   const label = COLLECTION_LABELS[collectionKey] || "Collection";
 
-  document.title = `BOSCA — ${label}`;
+  document.title = `BINZOO — ${label}`;
   document.getElementById("collHeroTitle").textContent = label;
   document.getElementById("collHeroImg").src = items[0] ? items[0].img : "";
   document.getElementById("collHeroImg").alt = label;
@@ -22,7 +22,7 @@
   const grid = document.getElementById("collectionGrid");
 
   function render(list){
-    grid.innerHTML = list.map(window.BoscaCardHTML).join("");
+    grid.innerHTML = list.map(window.BINZOOCardHTML).join("");
   }
   render(items);
 

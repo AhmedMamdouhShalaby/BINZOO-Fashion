@@ -4,7 +4,7 @@
   /* ---------- Ticker ---------- */
   const tickerTrack = document.getElementById("tickerTrack");
   if (tickerTrack) {
-    const phrase = "Wear What Leads — BOSCA — Since 2016";
+    const phrase = "Wear What Leads — BINZOO — Since 2026";
     const group = Array(6).fill(`<span>${phrase}</span>`).join("");
     tickerTrack.innerHTML = group + group;
   }
@@ -44,7 +44,7 @@
       </div>
     </article>`;
   }
-  window.BoscaCardHTML = cardHTML;
+  window.BINZOOCardHTML = cardHTML;
 
   function renderGrid(elId, items){
     const el = document.getElementById(elId);
@@ -70,8 +70,8 @@
   }
 
   /* ---------- Cart ---------- */
-  window.BoscaCart = window.BoscaCart || { data: {} };
-  let cart = window.BoscaCart.data;
+  window.BINZOOCart = window.BINZOOCart || { data: {} };
+  let cart = window.BINZOOCart.data;
 
   const cartDrawer = document.getElementById("cartDrawer");
   const cartOverlay = document.getElementById("cartOverlay");
@@ -94,7 +94,7 @@
     updateCartCount();
     showToast(`${product.name} added to bag`);
   }
-  window.BoscaAddToCart = addToCart;
+  window.BINZOOAddToCart = addToCart;
 
   function changeQty(id, delta){
     if(!cart[id]) return;
@@ -198,7 +198,7 @@
     const newsletterMsg = document.getElementById("newsletterMsg");
     newsletterForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      newsletterMsg.textContent = "Welcome to the Bosca community — thanks for subscribing.";
+      newsletterMsg.textContent = "Welcome to the BINZOO community — thanks for subscribing.";
       newsletterForm.reset();
     });
   }
