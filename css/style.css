@@ -386,3 +386,45 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:700;letter-spacing:.005em;}
   .logo-since{display:none;}
   .search-panel-inner{padding:18px 16px;}
 }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.12);
+  text-align: center;
+  padding: 20px;
+  font-size: .74rem;
+  color: rgba(255,255,255,.45);
+  letter-spacing: .04em;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.powered-text {
+  margin-top: 7px !important;
+}
+
+.powered-by {
+  color: var(--brass-soft);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity .3s ease;
+}
+
+.powered-by:hover {
+  opacity: .7;
+}
+
+@media (max-width: 480px) {
+  .footer-bottom {
+    padding: 18px 12px;
+    font-size: .68rem;
+    line-height: 1.6;
+  }
+
+  .powered-text {
+    margin-top: 6px !important;
+  }
+}
